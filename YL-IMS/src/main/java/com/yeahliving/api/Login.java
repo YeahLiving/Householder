@@ -20,8 +20,8 @@ public class Login {
     @GET
     @Produces("application/json")
     @Consumes("application/json")
-    public LoginResponse login(@DefaultValue("") @QueryParam("query") String username,
-                               @DefaultValue("") @QueryParam("query") String password) {
+    public LoginResponse login(@DefaultValue("") @QueryParam("usr") String username,
+                               @DefaultValue("") @QueryParam("pwd") String password) {
         //todo
         return null;
     }
