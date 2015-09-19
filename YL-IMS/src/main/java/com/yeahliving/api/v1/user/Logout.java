@@ -1,5 +1,6 @@
-package com.yeahliving.api.v1;
+package com.yeahliving.api.v1.user;
 
+import com.yeahliving.api.v1.BaseAPI;
 import com.yeahliving.api.v1.response.LoginResponse;
 
 import javax.ws.rs.*;

@@ -11,6 +11,7 @@ public class LoginRequest {
     @XmlElement(name = "usr")
     private String userName = StringUtils.EMPTY;
 
+    //it's MD5 string.
     @XmlElement(name = "pwd")
     private String password = StringUtils.EMPTY;
 
@@ -28,5 +29,13 @@ public class LoginRequest {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "LoginRequest{" +
+                "userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

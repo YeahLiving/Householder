@@ -1,5 +1,6 @@
-package com.yeahliving.datatypes.objs;
+package com.yeahliving.api.v1.bean;
 
+import com.yeahliving.datatypes.objs.Address;
 import org.apache.commons.lang.StringUtils;
 
 import javax.ws.rs.Path;
@@ -10,11 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by xingfeiy on 7/21/15.
+ * Created by xingfeiy on 9/11/15.
  */
 @XmlRootElement(name = "house")
-public class House {
-
+public class House extends DatabaseObject {
     @XmlAttribute(name = "house_id")
     private String houseID = StringUtils.EMPTY;
 
@@ -59,11 +59,80 @@ public class House {
         return new Address();
     }
 
-    @Path("/update_addr")
+    public String getHouseID() {
+        return houseID;
+    }
+
+    public void setHouseID(String houseID) {
+        this.houseID = houseID;
+    }
+
     public void setAddress(Address address) {
-        System.out.println("Update address: " + address);
         this.address = address;
     }
+
+    public float getArea() {
+        return area;
+    }
+
+    public void setArea(float area) {
+        this.area = area;
+    }
+
+    public String getHouseType() {
+        return houseType;
+    }
+
+    public void setHouseType(String houseType) {
+        this.houseType = houseType;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
+
+    public boolean isSellIntention() {
+        return sellIntention;
+    }
+
+    public void setSellIntention(boolean sellIntention) {
+        this.sellIntention = sellIntention;
+    }
+
+    public List<Integer> getCurrentLandlords() {
+        return currentLandlords;
+    }
+
+    public void setCurrentLandlords(List<Integer> currentLandlords) {
+        this.currentLandlords = currentLandlords;
+    }
+
+    public List<Integer> getHistoryLandlords() {
+        return historyLandlords;
+    }
+
+    public void setHistoryLandlords(List<Integer> historyLandlords) {
+        this.historyLandlords = historyLandlords;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    //
+//    @Path("/update_addr")
+//    public void setAddress(Address address) {
+//        System.out.println("Update address: " + address);
+//        this.address = address;
+//    }
 
     @Override
     public String toString() {

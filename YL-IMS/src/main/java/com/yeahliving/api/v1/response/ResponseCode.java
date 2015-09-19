@@ -5,6 +5,7 @@ package com.yeahliving.api.v1.response;
  * Created by xingfeiy on 8/18/15.
  */
 public enum ResponseCode {
+
     ALL_OK(13200, "OK"),
 
     INVALID_PARAMETER(13400, "INVALID_REQUEST"),
